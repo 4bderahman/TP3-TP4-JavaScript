@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice 3</title>
+  <style>
+    .pairs, .impairs {
+      display: inline-block;
+      width: 48%;
+      margin: 1%;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    function ajouterNombre() {
+      let nombre = parseInt(document.getElementById("nombre").value);
+      let cible;
+      if (nombre % 2 === 0) {
+        cible = document.querySelector(".pairs");
+      } else if (nombre % 2 === 1) {
+        cible = document.querySelector(".impairs");
+      } else {
+        alert("Veuillez saisir un nombre valide.");
+        return;
+      }
+      let element = document.createElement("p");
+      element.textContent = nombre;
+      cible.appendChild(element);
+    }
+  </script>
+</head>
+<body>
+  <label for="nombre">Saisir un nombre:</label>
+  <input type="number" id="nombre">
+  <button onclick="ajouterNombre()">Ajouter</button>
+  <div class="pairs">Nombres pairs:</div>
+  <div class="impairs">Nombres impairs:</div>
+</body>
+</html> 
