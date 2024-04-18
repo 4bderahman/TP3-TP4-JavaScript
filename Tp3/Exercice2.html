@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>permutation</title>
+    <script>
+        function swapValues() {
+            let value1 = document.getElementById('zone1').value;
+            let value2 = document.getElementById('zone2').value;
+
+            document.getElementById('zone1').value = value2;
+            document.getElementById('zone2').value = value1;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="zone1" >
+    <input type="text" id="zone2" >
+    <button onclick="swapValues()">Swap</button>
+</body>
+</html>
+
+

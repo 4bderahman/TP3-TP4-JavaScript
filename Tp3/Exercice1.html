@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme</title>
+    <script>
+        function calculerSomme() {
+            let nb1 = document.getElementById('nb1').value;
+            let nb2 = document.getElementById('nb2').value;
+            let resultat = parseInt(nb1) + parseInt(nb2);
+            document.getElementById('resultat').innerHTML = '=' + resultat;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="nb1" placeholder="le premier nombre">
+    <input type="number" id="nb2" placeholder="le deuxième nombre">
+    <span id="resultat"></span>
+    <button onclick="calculerSomme()">Calculer</button>
+
+</body>
+</html> 

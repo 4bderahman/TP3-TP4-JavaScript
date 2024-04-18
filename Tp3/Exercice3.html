@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="container">
+    <input type="text" id="name" placeholder="Entrez le nom et le prénom">
+    <button onclick="separateName()">Séparer</button>
+    <p id="lastName"></p>
+    <p id="firstName"></p>
+  </div>
+
+    <script>
+        function separateName() {
+            let fullName = document.getElementById('name').value;
+            let spaceIndex = fullName.indexOf(' ');
+
+            let lastName = fullName.slice(0, spaceIndex);
+            let firstName = fullName.slice(spaceIndex + 1);
+
+            document.getElementById('lastName').innerHTML = 'Nom: ' + lastName;
+            document.getElementById('firstName').innerHTML = 'Prénom: ' + firstName;
+        }
+    </script>
+</body>
+</html> 
